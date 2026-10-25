@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>3. Hotel and Flight Research Honesty — AI Travel Tips</title>
+<meta name="description" content="A plain-English manual for using AI to plan calmer trips.">
+<style>
+:root {
+  --ink: #25292e;
+  --paper: #fbfaf7;
+  --accent: #2b6777;
+  --accent-soft: #e7f0f2;
+  --line: #d9d6cd;
+  --warn: #8a4a12;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font: 17px/1.65 Georgia, "Times New Roman", serif;
+  -webkit-text-size-adjust: 100%;
+}
+main { max-width: 46rem; margin: 0 auto; padding: 2rem 1.2rem 4rem; }
+header.site {
+  background: var(--accent);
+  color: #fff;
+  padding: 0.7rem 1.2rem;
+  font-family: Verdana, system-ui, sans-serif;
+}
+header.site .wrap {
+  max-width: 46rem; margin: 0 auto;
+  display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.4rem 1rem;
+}
+header.site .brand { font-weight: bold; font-size: 1rem; color: #fff; text-decoration: none; }
+header.site nav { display: flex; flex-wrap: wrap; gap: 0.2rem 0.9rem; font-size: 0.8rem; }
+header.site nav a { color: #dcebf0; text-decoration: none; }
+header.site nav a:hover, header.site nav a[aria-current="page"] { color: #fff; text-decoration: underline; }
+h1, h2, h3, h4 { font-family: Verdana, system-ui, sans-serif; line-height: 1.25; color: #1c2b31; }
+h1 { font-size: 1.7rem; margin: 1.2rem 0 0.8rem; }
+h2 { font-size: 1.2rem; margin: 2rem 0 0.6rem; border-bottom: 2px solid var(--accent-soft); padding-bottom: 0.25rem; }
+h3 { font-size: 1.02rem; margin: 1.4rem 0 0.4rem; }
+p, ul, ol { margin: 0.6rem 0; }
+ul, ol { padding-left: 1.4rem; }
+li { margin: 0.25rem 0; }
+a { color: var(--accent); }
+code {
+  font-family: "SFMono-Regular", Consolas, monospace;
+  font-size: 0.85em;
+  background: #efece3;
+  padding: 0.1em 0.35em;
+  border-radius: 4px;
+}
+pre {
+  background: #f0ede4;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 0.8rem 1rem;
+  overflow-x: auto;
+}
+pre code { background: none; padding: 0; font-size: 0.82rem; }
+blockquote {
+  margin: 1rem 0; padding: 0.1rem 1rem;
+  border-left: 4px solid var(--accent);
+  background: var(--accent-soft);
+  border-radius: 0 6px 6px 0;
+}
+table { border-collapse: collapse; width: 100%; margin: 1rem 0; font-size: 0.92rem; }
+th, td { border: 1px solid var(--line); padding: 0.4rem 0.6rem; text-align: left; vertical-align: top; }
+th { background: var(--accent-soft); font-family: Verdana, system-ui, sans-serif; font-size: 0.82rem; }
+hr { border: none; border-top: 1px solid var(--line); margin: 2rem 0; }
+input[type="checkbox"] { margin-right: 0.35em; }
+input[type="checkbox"]:disabled { accent-color: var(--accent); }
+footer.pagenav {
+  margin-top: 3rem; padding-top: 1rem; border-top: 2px solid var(--line);
+  display: flex; justify-content: space-between; gap: 1rem;
+  font-family: Verdana, system-ui, sans-serif; font-size: 0.82rem;
+}
+footer.pagenav a { text-decoration: none; }
+footer.pagenav a:hover { text-decoration: underline; }
+footer.colophon {
+  margin-top: 2rem; font-size: 0.78rem; color: #6a6f75;
+  font-family: Verdana, system-ui, sans-serif;
+}
+</style>
+</head>
+<body>
+<header class="site"><div class="wrap">
+<a class="brand" href="index.html">AI Travel Tips</a>
+<nav>
+<a href="index.html">Start Here</a>
+<a href="01-itinerary-drafts-you-verify.html">1. Itineraries</a>
+<a href="02-translation-restaurants-and-train-stations.html">2. Translation</a>
+<a href="03-hotel-and-flight-research-honesty.html" aria-current="page">3. Bookings</a>
+<a href="04-packing-list-generation.html">4. Packing</a>
+<a href="05-offline-planning-with-local-models.html">5. Offline</a>
+<a href="06-scam-resistant-booking-habits.html">6. Scam Safety</a>
+<a href="trip-worksheet.html">Worksheet</a>
+<a href="verification-checklist.html">Checklist</a>
+<a href="glossary.html">Glossary</a>
+</nav>
+</div></header>
+<main>
+<h1>3. Hotel and Flight Research Honesty</h1>
+<h2>The uncomfortable truth about AI and prices</h2>
+<p>AI chat assistants are generally <strong>not connected to live booking systems</strong>. When you ask "what's a good hotel in Lisbon under $120?", you get: (a) hotels the AI remembers from its training data — sometimes years stale, (b) prices that are either made up, long-gone, or suspiciously round — and (c) reviews that may not reflect this year's management.</p>
+<p>This is not because the AI is lazy. It's because <strong>prices and availability are facts that change by the minute</strong>, and most chatbots can't or don't look them up live. Honesty about this limitation <em>is</em> the feature: once you accept that AI research is a <em>shortlist generator</em>, not a <em>booking engine</em>, everything works.</p>
+<h2>The role split, in one table</h2>
+<table><thead><tr><th>Task</th><th>AI is good at</th><th>You must do</th></tr></thead><tbody><tr><td>Shortlisting hotels</td><td>Explaining neighborhoods, building a shortlist by vibe & budget</td><td>Checking live rates + availability on booking sites</td></tr><tr><td>Comparing flight strategies</td><td>Explaining how fare classes, hubs, and seasons work</td><td>Real search on a flight metasearch or airline site</td></tr><tr><td>Review analysis</td><td>Summarizing whether a review complaint pattern is serious</td><td>Reading a handful of the <em>most recent</em> reviews yourself</td></tr><tr><td>"Is this price fair?"</td><td>Seasonality sanity check</td><td>Compare against official prices in the booking universe</td></tr></tbody></table>
+<p>If AI ever <em>quotes you a live-sounding price</em>, say: <em>"Do you have live access to that price, or is it from recollection?"</em> Watch what it answers. Use that information accordingly.</p>
+<h2>Method: shortlist → live check → book direct</h2>
+<p><strong>Step 1 — Shortlist with a sharp prompt:</strong></p>
+<pre><code>I need a hotel in [CITY], [DATES], budget about [USD] per night,
+for [TRAVELERS]. I care about: [quiet room, breakfast, walkable to X,
+late check-in, ...]. Suggest a shortlist of 5 candidates and tell me
+one reason to pick and one reason to doubt each. If you're not sure
+a hotel still operates or has been renovated recently, say so.
+Then list anything I need to confirm on a booking site.
+</code></pre>
+<p><strong>Step 2 — Live check, 5 minutes:</strong> Search each shortlisted name in a major booking site or metasearch. Confirm: still operating, rate in your budget, rooms actually available on your dates, free cancellation (worth a small premium when plans are soft).</p>
+<p><strong>Step 3 — Reviews yourself, 5 minutes:</strong> Sort reviews newest-first. Read the 5 most recent <strong>and</strong> the 5 lowest recent ones. Patterns matter more than scores: "thin walls" in three 2024–2025 reviews is real; one 2017 rant is noise. Then ask AI:</p>
+<pre><code>Here are snippets from recent guest reviews. Which complaints are
+one-off bad luck and which are structural, based on how many
+independent guests mention them?
+</code></pre>
+<p><strong>Step 4 — Book direct (usually):</strong> Once you've chosen, the hotel's own site (or the airline's own site) often matches agency prices but with easier cancellations, better room picks, and a contact that can actually help you if plans change. Booking direct also removes an entire layer of third-party confusion — which chapter 6 cares about a lot.</p>
+<h2>Flights: what AI is actually useful for</h2>
+<ul><li><strong>Route and hub strategy:</strong> "cheapest realistic way from [A] to [B]: direct, self-transfer, or through which hub? What seasons change the answer?"</li><li><strong>Timing wisdom:</strong> midweek departures, how early to arrive for a connection, why a 3-hour connection is safer than a 1-hour one on separate tickets.</li><li><strong>Separate-ticket danger check — very useful, very important:</strong> if you plan to book two separate tickets to save money, AI can gut-check them:</li></ul>
+<pre><code>I want to book flight A (arrives [time]) and a separate cheaper
+flight B (departs [time]) from the same or connected airports. You DID
+NOT book these. Advise minimal safe connection time for self-transfer
+with checked bags at [AIRPORT], and tell me the risks if flight A is late.
+</code></pre>
+<ul><li><strong>What AI cannot do:</strong> see today's fares. Genuine search happens on metasearch sites and airline websites — AI just tells you what to search for and what traps to avoid (e.g., why "budget" airfares at [cheap hub] can include fees that eliminate savings).</li></ul>
+<h2>The honesty habits</h2>
+<ol><li>Assume any price the AI says is <strong>at best a year old, at worst invented</strong> — always re-price on a live site. An honestly-expressed year-old ballpark is fine for understanding; an invented "cheap" number is not something to book.</li><li>Ask for <strong>the doubts, not the selling point.</strong> Whenever AI proposes a hotel, airline, or neighborhood, follow up with: <em>"Give me the strongest argument against this."</em></li><li>Never paste booking references, passport data, or full itineraries into a chat. AI doesn't need them; scammers in chat would.</li><li>Beware the AI that says "prices usually rise, book now through this link." Genuine chat tools don't have links to book through, and any pressure to "book now" in a chat is a red flag (see <a href="06-scam-resistant-booking-habits.html">chapter 6</a>).</li></ol>
+<h2>Copy-ready prompts</h2>
+<pre><code>Take my shortlist of 5 hotels and rank them by how well they fit these
+constraints, then tell me which single fact could disqualify each one
+and has to be verified live.
+</code></pre>
+<pre><code>Be genuinely critical: what's the strongest argument AGAINST booking
+the hotel you recommended?
+</code></pre>
+<hr>
+<p><em>Next: <a href="04-packing-list-generation.html">Packing lists that fit your trip</a></em></p>
+<hr>
+<p><em>Part of the <a href="index.html">AI Travel Tips</a> manual. Copyright (c) 2026 Asdale Dynamics, LLC — MIT-licensed.</em></p>
+<footer class="pagenav"><a href="02-translation-restaurants-and-train-stations.html">← 2. Translation</a><a href="04-packing-list-generation.html">4. Packing →</a></footer>
+<footer class="colophon">Part of the AI Travel Tips manual · Published by Asdale Dynamics, LLC · <a href="https://opensource.org/licenses/MIT">MIT licensed</a></footer>
+</main>
+</body>
+</html>

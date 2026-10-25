@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Trip Worksheet — AI Travel Tips</title>
+<meta name="description" content="A plain-English manual for using AI to plan calmer trips.">
+<style>
+:root {
+  --ink: #25292e;
+  --paper: #fbfaf7;
+  --accent: #2b6777;
+  --accent-soft: #e7f0f2;
+  --line: #d9d6cd;
+  --warn: #8a4a12;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font: 17px/1.65 Georgia, "Times New Roman", serif;
+  -webkit-text-size-adjust: 100%;
+}
+main { max-width: 46rem; margin: 0 auto; padding: 2rem 1.2rem 4rem; }
+header.site {
+  background: var(--accent);
+  color: #fff;
+  padding: 0.7rem 1.2rem;
+  font-family: Verdana, system-ui, sans-serif;
+}
+header.site .wrap {
+  max-width: 46rem; margin: 0 auto;
+  display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.4rem 1rem;
+}
+header.site .brand { font-weight: bold; font-size: 1rem; color: #fff; text-decoration: none; }
+header.site nav { display: flex; flex-wrap: wrap; gap: 0.2rem 0.9rem; font-size: 0.8rem; }
+header.site nav a { color: #dcebf0; text-decoration: none; }
+header.site nav a:hover, header.site nav a[aria-current="page"] { color: #fff; text-decoration: underline; }
+h1, h2, h3, h4 { font-family: Verdana, system-ui, sans-serif; line-height: 1.25; color: #1c2b31; }
+h1 { font-size: 1.7rem; margin: 1.2rem 0 0.8rem; }
+h2 { font-size: 1.2rem; margin: 2rem 0 0.6rem; border-bottom: 2px solid var(--accent-soft); padding-bottom: 0.25rem; }
+h3 { font-size: 1.02rem; margin: 1.4rem 0 0.4rem; }
+p, ul, ol { margin: 0.6rem 0; }
+ul, ol { padding-left: 1.4rem; }
+li { margin: 0.25rem 0; }
+a { color: var(--accent); }
+code {
+  font-family: "SFMono-Regular", Consolas, monospace;
+  font-size: 0.85em;
+  background: #efece3;
+  padding: 0.1em 0.35em;
+  border-radius: 4px;
+}
+pre {
+  background: #f0ede4;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 0.8rem 1rem;
+  overflow-x: auto;
+}
+pre code { background: none; padding: 0; font-size: 0.82rem; }
+blockquote {
+  margin: 1rem 0; padding: 0.1rem 1rem;
+  border-left: 4px solid var(--accent);
+  background: var(--accent-soft);
+  border-radius: 0 6px 6px 0;
+}
+table { border-collapse: collapse; width: 100%; margin: 1rem 0; font-size: 0.92rem; }
+th, td { border: 1px solid var(--line); padding: 0.4rem 0.6rem; text-align: left; vertical-align: top; }
+th { background: var(--accent-soft); font-family: Verdana, system-ui, sans-serif; font-size: 0.82rem; }
+hr { border: none; border-top: 1px solid var(--line); margin: 2rem 0; }
+input[type="checkbox"] { margin-right: 0.35em; }
+input[type="checkbox"]:disabled { accent-color: var(--accent); }
+footer.pagenav {
+  margin-top: 3rem; padding-top: 1rem; border-top: 2px solid var(--line);
+  display: flex; justify-content: space-between; gap: 1rem;
+  font-family: Verdana, system-ui, sans-serif; font-size: 0.82rem;
+}
+footer.pagenav a { text-decoration: none; }
+footer.pagenav a:hover { text-decoration: underline; }
+footer.colophon {
+  margin-top: 2rem; font-size: 0.78rem; color: #6a6f75;
+  font-family: Verdana, system-ui, sans-serif;
+}
+</style>
+</head>
+<body>
+<header class="site"><div class="wrap">
+<a class="brand" href="index.html">AI Travel Tips</a>
+<nav>
+<a href="index.html">Start Here</a>
+<a href="01-itinerary-drafts-you-verify.html">1. Itineraries</a>
+<a href="02-translation-restaurants-and-train-stations.html">2. Translation</a>
+<a href="03-hotel-and-flight-research-honesty.html">3. Bookings</a>
+<a href="04-packing-list-generation.html">4. Packing</a>
+<a href="05-offline-planning-with-local-models.html">5. Offline</a>
+<a href="06-scam-resistant-booking-habits.html">6. Scam Safety</a>
+<a href="trip-worksheet.html" aria-current="page">Worksheet</a>
+<a href="verification-checklist.html">Checklist</a>
+<a href="glossary.html">Glossary</a>
+</nav>
+</div></header>
+<main>
+<h1>The Trip Worksheet</h1>
+<p>One page per trip. Fill it in with the AI's help (that's what the chapters are for), then <strong>plan from this page, not from the chat</strong>. Chats scroll away; worksheets don't. If you also use the free-travel-planner-kit printables, this worksheet is the "master" that feeds the paper binder — it's the thinking layer; the printables are the carrying layer.</p>
+<hr>
+<h2>Trip: ______________________  Dates: ___________ → ___________</h2>
+<h3>1. Trip shape (chapter 1, step 1)</h3>
+<table><thead><tr><th>Question</th><th>Answer</th></tr></thead><tbody><tr><td>Who is traveling?</td><td></td></tr><tr><td>Daily start / end time</td><td></td></tr><tr><td>Pace (anchor activities per day)</td><td></td></tr><tr><td>Top 3 "would be sad to miss"</td><td></td></tr><tr><td>Budget style</td><td></td></tr><tr><td>Anything that changes plans (mobility, small kids, meds)</td><td></td></tr></tbody></table>
+<h3>2. The draft (chapter 1, steps 2–3)</h3>
+<p>Draft saved where? ______________________</p>
+<p>Geographic regroup done? ☐  Hours recount done? ☐ Rainy-day version done? ☐  "What would you cut?" done? ☐</p>
+<h3>3. Load-bearing facts — verified (chapter 1, step 4)</h3>
+<table><thead><tr><th>Fact</th><th>Verified on official site?</th><th>Date checked</th></tr></thead><tbody><tr><td>Top sight 1 hours/closures</td><td>☐</td><td></td></tr><tr><td>Top sight 2 hours/closures</td><td>☐</td><td></td></tr><tr><td>Top sight 3 hours/closures</td><td>☐</td><td></td></tr><tr><td>Advance bookings needed</td><td>☐</td><td></td></tr><tr><td>First/last transit departures</td><td>☐</td><td></td></tr><tr><td>The one must-eat restaurant</td><td>☐</td><td></td></tr></tbody></table>
+<h3>4. Bookings log (chapters 3 & 6)</h3>
+<table><thead><tr><th>What</th><th>Provider (official name)</th><th>Confirmation # kept where?</th><th>Paid with (protected channel?)</th><th>Confirmed once with provider?</th></tr></thead><tbody><tr><td>Flights out</td><td></td><td></td><td>☐</td><td>☐</td></tr><tr><td>Flights back</td><td></td><td></td><td>☐</td><td>☐</td></tr><tr><td>Hotel</td><td></td><td></td><td>☐</td><td>☐</td></tr><tr><td>Hotel</td><td></td><td></td><td>☐</td><td>☐</td></tr><tr><td>Train/tour</td><td></td><td></td><td>☐</td><td>☐</td></tr></tbody></table>
+<h3>5. Language kit (chapter 2)</h3>
+<ul><li><input type="checkbox" disabled> Off-line translation packs downloaded</li><li><input type="checkbox" disabled> Screenshot deck of 6 sentences made and saved</li><li><input type="checkbox" disabled> Allergy/medical sentence written & screenshotted (if needed)</li></ul>
+<h3>6. Offline kit (chapter 5)</h3>
+<ul><li><input type="checkbox" disabled> Local model tested in airplane mode</li><li><input type="checkbox" disabled> Itinerary pasted into notes app</li><li><input type="checkbox" disabled> Offline maps downloaded (city + airport region)</li><li><input type="checkbox" disabled> This page printed or saved offline</li></ul>
+<h3>7. Day plans (fill from the verified draft)</h3>
+<p><strong>Day 1 (arrival — keep it light)</strong> Plan: Fragile facts to trust slowly: Rain option:</p>
+<p><strong>Day 2</strong> Plan: Rain option:</p>
+<p><strong>Day 3</strong> Plan: Rain option:</p>
+<p><em>(Add days as needed — one row per day beats one paragraph per day.)</em></p>
+<hr>
+<p><em>Part of the <a href="index.html">AI Travel Tips</a> manual. Copyright (c) 2026 Asdale Dynamics, LLC — MIT-licensed.</em></p>
+<footer class="pagenav"><a href="06-scam-resistant-booking-habits.html">← 6. Scam Safety</a><a href="verification-checklist.html">Checklist →</a></footer>
+<footer class="colophon">Part of the AI Travel Tips manual · Published by Asdale Dynamics, LLC · <a href="https://opensource.org/licenses/MIT">MIT licensed</a></footer>
+</main>
+</body>
+</html>

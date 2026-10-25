@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>5. Offline Planning with Local Models — AI Travel Tips</title>
+<meta name="description" content="A plain-English manual for using AI to plan calmer trips.">
+<style>
+:root {
+  --ink: #25292e;
+  --paper: #fbfaf7;
+  --accent: #2b6777;
+  --accent-soft: #e7f0f2;
+  --line: #d9d6cd;
+  --warn: #8a4a12;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font: 17px/1.65 Georgia, "Times New Roman", serif;
+  -webkit-text-size-adjust: 100%;
+}
+main { max-width: 46rem; margin: 0 auto; padding: 2rem 1.2rem 4rem; }
+header.site {
+  background: var(--accent);
+  color: #fff;
+  padding: 0.7rem 1.2rem;
+  font-family: Verdana, system-ui, sans-serif;
+}
+header.site .wrap {
+  max-width: 46rem; margin: 0 auto;
+  display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.4rem 1rem;
+}
+header.site .brand { font-weight: bold; font-size: 1rem; color: #fff; text-decoration: none; }
+header.site nav { display: flex; flex-wrap: wrap; gap: 0.2rem 0.9rem; font-size: 0.8rem; }
+header.site nav a { color: #dcebf0; text-decoration: none; }
+header.site nav a:hover, header.site nav a[aria-current="page"] { color: #fff; text-decoration: underline; }
+h1, h2, h3, h4 { font-family: Verdana, system-ui, sans-serif; line-height: 1.25; color: #1c2b31; }
+h1 { font-size: 1.7rem; margin: 1.2rem 0 0.8rem; }
+h2 { font-size: 1.2rem; margin: 2rem 0 0.6rem; border-bottom: 2px solid var(--accent-soft); padding-bottom: 0.25rem; }
+h3 { font-size: 1.02rem; margin: 1.4rem 0 0.4rem; }
+p, ul, ol { margin: 0.6rem 0; }
+ul, ol { padding-left: 1.4rem; }
+li { margin: 0.25rem 0; }
+a { color: var(--accent); }
+code {
+  font-family: "SFMono-Regular", Consolas, monospace;
+  font-size: 0.85em;
+  background: #efece3;
+  padding: 0.1em 0.35em;
+  border-radius: 4px;
+}
+pre {
+  background: #f0ede4;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 0.8rem 1rem;
+  overflow-x: auto;
+}
+pre code { background: none; padding: 0; font-size: 0.82rem; }
+blockquote {
+  margin: 1rem 0; padding: 0.1rem 1rem;
+  border-left: 4px solid var(--accent);
+  background: var(--accent-soft);
+  border-radius: 0 6px 6px 0;
+}
+table { border-collapse: collapse; width: 100%; margin: 1rem 0; font-size: 0.92rem; }
+th, td { border: 1px solid var(--line); padding: 0.4rem 0.6rem; text-align: left; vertical-align: top; }
+th { background: var(--accent-soft); font-family: Verdana, system-ui, sans-serif; font-size: 0.82rem; }
+hr { border: none; border-top: 1px solid var(--line); margin: 2rem 0; }
+input[type="checkbox"] { margin-right: 0.35em; }
+input[type="checkbox"]:disabled { accent-color: var(--accent); }
+footer.pagenav {
+  margin-top: 3rem; padding-top: 1rem; border-top: 2px solid var(--line);
+  display: flex; justify-content: space-between; gap: 1rem;
+  font-family: Verdana, system-ui, sans-serif; font-size: 0.82rem;
+}
+footer.pagenav a { text-decoration: none; }
+footer.pagenav a:hover { text-decoration: underline; }
+footer.colophon {
+  margin-top: 2rem; font-size: 0.78rem; color: #6a6f75;
+  font-family: Verdana, system-ui, sans-serif;
+}
+</style>
+</head>
+<body>
+<header class="site"><div class="wrap">
+<a class="brand" href="index.html">AI Travel Tips</a>
+<nav>
+<a href="index.html">Start Here</a>
+<a href="01-itinerary-drafts-you-verify.html">1. Itineraries</a>
+<a href="02-translation-restaurants-and-train-stations.html">2. Translation</a>
+<a href="03-hotel-and-flight-research-honesty.html">3. Bookings</a>
+<a href="04-packing-list-generation.html">4. Packing</a>
+<a href="05-offline-planning-with-local-models.html" aria-current="page">5. Offline</a>
+<a href="06-scam-resistant-booking-habits.html">6. Scam Safety</a>
+<a href="trip-worksheet.html">Worksheet</a>
+<a href="verification-checklist.html">Checklist</a>
+<a href="glossary.html">Glossary</a>
+</nav>
+</div></header>
+<main>
+<h1>5. Offline Planning with Local Models</h1>
+<h2>The dead-zone problem</h2>
+<p>National parks, mountain trains, ferries, foreign basements, airplane seats — some of the best parts of a trip happen where the internet doesn't. Cloud AI tools go dark exactly when you need to re-plan: a closed trailhead, a missed connection, "where can we eat nearby?" (which needs internet, but "what do we do now that it's raining?" does not).</p>
+<p>The fix is a <strong>local model</strong>: a small AI that runs entirely on your own laptop (or, these days, some phones). No internet, no account, no data leaving the machine. This chapter is deliberately beginner-friendly — you can do this even if you've never installed anything but a browser.</p>
+<h2>What "local model" means in one paragraph</h2>
+<p>Big-name AI chatbots run on company servers; your phone sends text to them and gets text back. A local model is a much smaller AI <em>file</em> that runs on <em>your</em> hardware with a small app. Modern small models (7–8 billion-parameter class) are genuinely useful for this manual's tasks: itineraries, packing lists, translations, re-planning when plans break. They are <strong>weaker</strong> than cloud models at current-events facts — which doesn't matter, because half your planning is already done before you board the plane.</p>
+<p><strong>Important:</strong> local models are still not fact-checkers. Everything in the verification checklist applies — the model just doesn't need wifi to be wrong.</p>
+<h2>Step 1: Install a free local AI app</h2>
+<p>A standard beginner setup today (all free, no account):</p>
+<ol><li><strong>Choose a runner app.</strong> Popular beginner-friendly options include <em>Ollama</em> (command-line style but simple, runs on most laptops) and <em>LM Studio</em> (point-and-click GUI, downloads models inside the app). For most people, LM Studio is the gentler first stop.</li><li><strong>Download one small model.</strong> Inside the app, pick a well-known small instruct model — think "a modern 7–8B class model" (names like Llama 3.1 8B Instruct, Qwen 2.5 7B Instruct, Mistral 7B Instruct are common families). Size on disk: about 4–6 GB.</li><li><strong>Test offline.</strong> Turn off your wifi and chat with it. If it answers, you're ready for dead zones.</li></ol>
+<p>Hardware reality check: 8 GB of RAM is workable, 16 GB is comfortable. A 5-year old laptop may be slow but usable. If it's painfully slow, use a <em>smaller</em> quantized model — the app will show you options.</p>
+<h2>Step 2: The flight plan — do the cloud work at home</h2>
+<p>Local models shine when you <strong>pre-load the trip into them before you leave</strong>. At home, on fast wifi, do this with your <em>cloud</em> AI, then carry the results:</p>
+<ul><li>Chapter 1's itinerary draft, verified.</li><li>Chapter 2's screenshot deck of translated sentences.</li><li>Chapter 4's packing list.</li><li>The <a href="trip-worksheet.html">trip worksheet</a> filled in.</li></ul>
+<p>Then, in a dead zone, the local model's job is <strong>re-planning, not re-searching</strong>:</p>
+<pre><code>Here is my day plan (itinerary below) and today's constraints
+(trailhead closed / rain / missed 9:12 train / illness at 2 p.m.).
+Full itinerary: [PASTE]. Constraint: [DESCRIBE].
+Re-plan only the affected day, staying walkable from here, using
+the assumption that nothing new can be verified online right now.
+Mark anything that needs verification done later.
+</code></pre>
+<p>Copy the finished itinerary into your notes app before you travel, and paste it into the local model — local models have no memory of what you did at home. <em>The paste is the memory.</em></p>
+<h2>Step 3 (optional): A private reference card for sensitive moments</h2>
+<p>One genuine advantage of local models: <strong>nothing you type leaves your machine.</strong> A useful, safe pattern for booking-sensitive moments:</p>
+<pre><code>Here are my options, written as [A with reason] / [B with reason] / [C with reason].
+Help me think through which to pick, using only what I've given you.
+No personal data is included, and I will make the final decision myself.
+</code></pre>
+<p>One caution worth keeping: never paste passwords, payment card numbers, full passport numbers, or actual ticket codes into any AI — even a purely local one — out of pure habit discipline. It costs you nothing and keeps the rule simple.</p>
+<h2>Step 4: The offline day-trip script</h2>
+<p>A practical combo that works without any signal:</p>
+<ol><li><strong>Maps offline</strong> — most major map apps allow pre-downloading regions. Download your destination city <em>and its airport region</em> at home.</li><li><strong>Translations offline</strong> (chapter 2, layer 1).</li><li><strong>Local model</strong> — for the "we're stuck, advise me" conversations.</li><li><strong>Paper backup</strong> — one printed page (like the <a href="trip-worksheet.html">trip worksheet</a>): day plan on paper fits in a pocket and never needs a charger.</li></ol>
+<h2>What local models are <em>bad</em> at (manage expectations)</h2>
+<ul><li>Anything time-sensitive: it doesn't know today's date, opening hours, or that a museum burned down last month.</li><li><strong>Foreign-language breadth:</strong> cloud translation beats small local models for uncommon languages; rely on the offline translation apps for that, and use the local model for <em>logistics reasoning</em>, not translation.</li><li>Long documents: small models can lose track on very long pasted text — keep pastes short and specific.</li></ul>
+<h2>Setup checklist (print this bit)</h2>
+<ul><li><input type="checkbox" disabled> Runner app installed and tested offline.</li><li><input type="checkbox" disabled> One small model downloaded (~4–6 GB).</li><li><input type="checkbox" disabled> Airplane-mode chat test passed at home.</li><li><input type="checkbox" disabled> Itinerary + worksheet + translation deck saved in notes app.</li><li><input type="checkbox" disabled> Offline maps downloaded for destination and transit regions.</li><li><input type="checkbox" disabled> Laptop + charger + (optional) power bank packed.</li></ul>
+<hr>
+<p><em>Next: <a href="06-scam-resistant-booking-habits.html">Scam-resistant booking habits</a></em></p>
+<hr>
+<p><em>Part of the <a href="index.html">AI Travel Tips</a> manual. Copyright (c) 2026 Asdale Dynamics, LLC — MIT-licensed.</em></p>
+<footer class="pagenav"><a href="04-packing-list-generation.html">← 4. Packing</a><a href="06-scam-resistant-booking-habits.html">6. Scam Safety →</a></footer>
+<footer class="colophon">Part of the AI Travel Tips manual · Published by Asdale Dynamics, LLC · <a href="https://opensource.org/licenses/MIT">MIT licensed</a></footer>
+</main>
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Glossary — AI Travel Tips</title>
+<meta name="description" content="A plain-English manual for using AI to plan calmer trips.">
+<style>
+:root {
+  --ink: #25292e;
+  --paper: #fbfaf7;
+  --accent: #2b6777;
+  --accent-soft: #e7f0f2;
+  --line: #d9d6cd;
+  --warn: #8a4a12;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font: 17px/1.65 Georgia, "Times New Roman", serif;
+  -webkit-text-size-adjust: 100%;
+}
+main { max-width: 46rem; margin: 0 auto; padding: 2rem 1.2rem 4rem; }
+header.site {
+  background: var(--accent);
+  color: #fff;
+  padding: 0.7rem 1.2rem;
+  font-family: Verdana, system-ui, sans-serif;
+}
+header.site .wrap {
+  max-width: 46rem; margin: 0 auto;
+  display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.4rem 1rem;
+}
+header.site .brand { font-weight: bold; font-size: 1rem; color: #fff; text-decoration: none; }
+header.site nav { display: flex; flex-wrap: wrap; gap: 0.2rem 0.9rem; font-size: 0.8rem; }
+header.site nav a { color: #dcebf0; text-decoration: none; }
+header.site nav a:hover, header.site nav a[aria-current="page"] { color: #fff; text-decoration: underline; }
+h1, h2, h3, h4 { font-family: Verdana, system-ui, sans-serif; line-height: 1.25; color: #1c2b31; }
+h1 { font-size: 1.7rem; margin: 1.2rem 0 0.8rem; }
+h2 { font-size: 1.2rem; margin: 2rem 0 0.6rem; border-bottom: 2px solid var(--accent-soft); padding-bottom: 0.25rem; }
+h3 { font-size: 1.02rem; margin: 1.4rem 0 0.4rem; }
+p, ul, ol { margin: 0.6rem 0; }
+ul, ol { padding-left: 1.4rem; }
+li { margin: 0.25rem 0; }
+a { color: var(--accent); }
+code {
+  font-family: "SFMono-Regular", Consolas, monospace;
+  font-size: 0.85em;
+  background: #efece3;
+  padding: 0.1em 0.35em;
+  border-radius: 4px;
+}
+pre {
+  background: #f0ede4;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 0.8rem 1rem;
+  overflow-x: auto;
+}
+pre code { background: none; padding: 0; font-size: 0.82rem; }
+blockquote {
+  margin: 1rem 0; padding: 0.1rem 1rem;
+  border-left: 4px solid var(--accent);
+  background: var(--accent-soft);
+  border-radius: 0 6px 6px 0;
+}
+table { border-collapse: collapse; width: 100%; margin: 1rem 0; font-size: 0.92rem; }
+th, td { border: 1px solid var(--line); padding: 0.4rem 0.6rem; text-align: left; vertical-align: top; }
+th { background: var(--accent-soft); font-family: Verdana, system-ui, sans-serif; font-size: 0.82rem; }
+hr { border: none; border-top: 1px solid var(--line); margin: 2rem 0; }
+input[type="checkbox"] { margin-right: 0.35em; }
+input[type="checkbox"]:disabled { accent-color: var(--accent); }
+footer.pagenav {
+  margin-top: 3rem; padding-top: 1rem; border-top: 2px solid var(--line);
+  display: flex; justify-content: space-between; gap: 1rem;
+  font-family: Verdana, system-ui, sans-serif; font-size: 0.82rem;
+}
+footer.pagenav a { text-decoration: none; }
+footer.pagenav a:hover { text-decoration: underline; }
+footer.colophon {
+  margin-top: 2rem; font-size: 0.78rem; color: #6a6f75;
+  font-family: Verdana, system-ui, sans-serif;
+}
+</style>
+</head>
+<body>
+<header class="site"><div class="wrap">
+<a class="brand" href="index.html">AI Travel Tips</a>
+<nav>
+<a href="index.html">Start Here</a>
+<a href="01-itinerary-drafts-you-verify.html">1. Itineraries</a>
+<a href="02-translation-restaurants-and-train-stations.html">2. Translation</a>
+<a href="03-hotel-and-flight-research-honesty.html">3. Bookings</a>
+<a href="04-packing-list-generation.html">4. Packing</a>
+<a href="05-offline-planning-with-local-models.html">5. Offline</a>
+<a href="06-scam-resistant-booking-habits.html">6. Scam Safety</a>
+<a href="trip-worksheet.html">Worksheet</a>
+<a href="verification-checklist.html">Checklist</a>
+<a href="glossary.html" aria-current="page">Glossary</a>
+</nav>
+</div></header>
+<main>
+<h1>Glossary</h1>
+<p>Plain-English definitions, like a friend would give them. Terms are ordered roughly as you meet them in the guide.</p>
+<p><strong>AI assistant / chatbot</strong> — software you talk to in ordinary language that answers, drafts, and explains. Is <em>not</em> a live window onto the world: prices, schedules, and opening times are usually from memory, not real-time.</p>
+<p><strong>Hallucination</strong> — when an AI states something false with total confidence (a phone number, a train time, a museum that closed in 2019). Not a glitch; a side effect of how these models produce text. The <a href="verification-checklist.html">checklist</a> exists because of it.</p>
+<p><strong>Draft</strong> — a first version you intend to check and change. In this manual, every AI output is treated as a draft: fast, useful, untrusted.</p>
+<p><strong>Verify / verification</strong> — confirming a claim against the <em>primary source</em>: the airline's own site, the museum's own site, the operator's own timetable. You are the verifier; the AI is the drafter.</p>
+<p><strong>Primary source</strong> — the site or office run by whoever actually operates the thing you're booking or visiting. Blogs, aggregators, and chats are <em>secondary</em>; useful for discovery, never final for knife-edge facts.</p>
+<p><strong>Camera translation</strong> — pointing your phone's camera at written text (menus, signs, ticket machines) and getting a live translation overlaid or listed. Weakness: handwritten menus and oddly-lit fonts; doubled by asking for a dish <em>description</em> rather than a literal word-for-word chart. See chapter 2.</p>
+<p><strong>Screenshot deck</strong> — a pre-written set of translated sentences saved as images or notes on your phone, made at home in good conditions. Your layer-2 backup when apps and batteries fail. See chapter 2.</p>
+<p><strong>Local model / local AI</strong> — a small AI that runs entirely on your device with no internet. Slower and less current than cloud AI, but it works in airplane mode and in national parks, and nothing you type leaves your machine. See chapter 5.</p>
+<p><strong>Parameter (e.g. "7B" / "8B")</strong> — rough measure of a model's size. B is "billion". In this manual: 7–8B-class models are the sweet spot for travel re-planning on an ordinary laptop.</p>
+<p><strong>Runner app</strong> — the program that downloads and runs a local model on your machine (e.g. a GUI app or a command-line tool). The model file itself is not an app; you need a runner. See chapter 5, step 1.</p>
+<p><strong>Instruct model</strong> — a model downloaded/tuned to <em>follow instructions</em> (write a list, edit my plan) rather than merely continue text. When picking your first local model, choose one whose name ends in "Instruct" or is described as chat/instruction-tuned.</p>
+<p><strong>Quantized model</strong> — a compressed copy of a model (slightly less precise, much smaller). Many runs on ordinary RAM only work because of quantization; in your runner app, the defaults are usually the right ones for a beginner.</p>
+<p><strong>Offline mode test</strong> — switching your device's wifi fully off at home and checking your local model/chat still answers. If it passes, it will pass in the dead zone. Chapter 5, step 1.</p>
+<p><strong>Load-bearing fact</strong> — a fact whose being wrong would actually damage the trip (museum hours, train's last departure, allergy wording). Everything else in a draft can be wrong with little cost; these get your scarce checking time.</p>
+<p><strong>Metasearch site</strong> — a search site that <em>finds</em> and <em>compares</em> offers from many booking sites, then sends you to one of them. Useful for live prices; the "booking" step still happens at an actual seller, which is where chapter 6 applies.</p>
+<p><strong>Booking direct / booking direct vs. agency</strong> — reserving on the airline/hotel's own site rather than a third party. Often matches the agency's price and gives out easier cancels, better room choice, and a real contact when plans change. See chapter 3.</p>
+<p><strong>Self-transfer</strong> — building a connection from two <em>separate</em> tickets; you re-check-in and re-check-bags yourself. Cheaper sometimes; higher risk if the first flight is late. A deliberately careful use of AI is gut-checking these timings. See chapter 3.</p>
+<p><strong>Chargeback</strong> — the process of asking your card issuer to reverse a payment for fraud or non-delivery. Fast reporting matters; hours count, not days. See chapter 6.</p>
+<p><strong>Phishing</strong> — a fake message or website designed to look like a real company so you'll type in payment or login details. The travel version almost always arrives right after you book something real.</p>
+<p><strong>Scam audit (of a message)</strong> — asking an AI to analyze a suspicious message or policy for scam-typical patterns, using only the pasted text with the reference codes removed. See chapter 6.</p>
+<p><strong>Offline kit</strong> — the travel bundle that needs no signal: downloaded maps, downloaded translation packs, notes app with the itinerary, charged local model, and one paper page. Chapter 5's checklist; not the same thing as the printables project.</p>
+<p><strong>free-travel-planner-kit</strong> — the companion project to this manual: printable planning sheets (checklists, budgets, day-plan pages). This guide teaches the AI workflow; the kit provides the paper. Neither repeats the other.</p>
+<hr>
+<p><em>Part of the <a href="index.html">AI Travel Tips</a> manual. Copyright (c) 2026 Asdale Dynamics, LLC — MIT-licensed.</em></p>
+<footer class="pagenav"><a href="verification-checklist.html">← Checklist</a><span></span></footer>
+<footer class="colophon">Part of the AI Travel Tips manual · Published by Asdale Dynamics, LLC · <a href="https://opensource.org/licenses/MIT">MIT licensed</a></footer>
+</main>
+</body>
+</html>

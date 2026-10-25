@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>1. Itinerary Drafts You Verify — AI Travel Tips</title>
+<meta name="description" content="A plain-English manual for using AI to plan calmer trips.">
+<style>
+:root {
+  --ink: #25292e;
+  --paper: #fbfaf7;
+  --accent: #2b6777;
+  --accent-soft: #e7f0f2;
+  --line: #d9d6cd;
+  --warn: #8a4a12;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font: 17px/1.65 Georgia, "Times New Roman", serif;
+  -webkit-text-size-adjust: 100%;
+}
+main { max-width: 46rem; margin: 0 auto; padding: 2rem 1.2rem 4rem; }
+header.site {
+  background: var(--accent);
+  color: #fff;
+  padding: 0.7rem 1.2rem;
+  font-family: Verdana, system-ui, sans-serif;
+}
+header.site .wrap {
+  max-width: 46rem; margin: 0 auto;
+  display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.4rem 1rem;
+}
+header.site .brand { font-weight: bold; font-size: 1rem; color: #fff; text-decoration: none; }
+header.site nav { display: flex; flex-wrap: wrap; gap: 0.2rem 0.9rem; font-size: 0.8rem; }
+header.site nav a { color: #dcebf0; text-decoration: none; }
+header.site nav a:hover, header.site nav a[aria-current="page"] { color: #fff; text-decoration: underline; }
+h1, h2, h3, h4 { font-family: Verdana, system-ui, sans-serif; line-height: 1.25; color: #1c2b31; }
+h1 { font-size: 1.7rem; margin: 1.2rem 0 0.8rem; }
+h2 { font-size: 1.2rem; margin: 2rem 0 0.6rem; border-bottom: 2px solid var(--accent-soft); padding-bottom: 0.25rem; }
+h3 { font-size: 1.02rem; margin: 1.4rem 0 0.4rem; }
+p, ul, ol { margin: 0.6rem 0; }
+ul, ol { padding-left: 1.4rem; }
+li { margin: 0.25rem 0; }
+a { color: var(--accent); }
+code {
+  font-family: "SFMono-Regular", Consolas, monospace;
+  font-size: 0.85em;
+  background: #efece3;
+  padding: 0.1em 0.35em;
+  border-radius: 4px;
+}
+pre {
+  background: #f0ede4;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 0.8rem 1rem;
+  overflow-x: auto;
+}
+pre code { background: none; padding: 0; font-size: 0.82rem; }
+blockquote {
+  margin: 1rem 0; padding: 0.1rem 1rem;
+  border-left: 4px solid var(--accent);
+  background: var(--accent-soft);
+  border-radius: 0 6px 6px 0;
+}
+table { border-collapse: collapse; width: 100%; margin: 1rem 0; font-size: 0.92rem; }
+th, td { border: 1px solid var(--line); padding: 0.4rem 0.6rem; text-align: left; vertical-align: top; }
+th { background: var(--accent-soft); font-family: Verdana, system-ui, sans-serif; font-size: 0.82rem; }
+hr { border: none; border-top: 1px solid var(--line); margin: 2rem 0; }
+input[type="checkbox"] { margin-right: 0.35em; }
+input[type="checkbox"]:disabled { accent-color: var(--accent); }
+footer.pagenav {
+  margin-top: 3rem; padding-top: 1rem; border-top: 2px solid var(--line);
+  display: flex; justify-content: space-between; gap: 1rem;
+  font-family: Verdana, system-ui, sans-serif; font-size: 0.82rem;
+}
+footer.pagenav a { text-decoration: none; }
+footer.pagenav a:hover { text-decoration: underline; }
+footer.colophon {
+  margin-top: 2rem; font-size: 0.78rem; color: #6a6f75;
+  font-family: Verdana, system-ui, sans-serif;
+}
+</style>
+</head>
+<body>
+<header class="site"><div class="wrap">
+<a class="brand" href="index.html">AI Travel Tips</a>
+<nav>
+<a href="index.html">Start Here</a>
+<a href="01-itinerary-drafts-you-verify.html" aria-current="page">1. Itineraries</a>
+<a href="02-translation-restaurants-and-train-stations.html">2. Translation</a>
+<a href="03-hotel-and-flight-research-honesty.html">3. Bookings</a>
+<a href="04-packing-list-generation.html">4. Packing</a>
+<a href="05-offline-planning-with-local-models.html">5. Offline</a>
+<a href="06-scam-resistant-booking-habits.html">6. Scam Safety</a>
+<a href="trip-worksheet.html">Worksheet</a>
+<a href="verification-checklist.html">Checklist</a>
+<a href="glossary.html">Glossary</a>
+</nav>
+</div></header>
+<main>
+<h1>1. Itinerary Drafts You Verify</h1>
+<h2>Why "draft" is the important word</h2>
+<p>An AI-written itinerary is a <em>draft</em>: a fast, complete-looking sketch full of details you didn't have to invent yourself. That's exactly its value — and exactly its danger. AI tools are trained to give confident, tidy answers, and a tidy answer can be quietly wrong: a museum closed on Mondays, a train that runs "twice a day" at dawn, a neighborhood that's a 40-minute taxi ride, not a "short walk."</p>
+<p>The workflow in this chapter makes that harmless. You get a draft in minutes, then spend ten minutes <strong>vetting only the load-bearing details</strong> — the things that would wreck a day if they were wrong.</p>
+<h2>Step 1: Give the AI your real constraints</h2>
+<p>Vague prompts get vague drafts. Before asking, decide:</p>
+<ul><li><strong>Dates</strong> (or "first week of June" if flexible)</li><li><strong>Daily start and end times</strong> — include the arrival day; it's usually a write-off</li><li><strong>Travelers</strong> — kids, mobility limits, "my partner needs coffee before 9 a.m."</li><li><strong>Pace</strong> — "one anchor activity per day, walk everywhere else"</li><li><strong>Interest list</strong> — top 3 things you'd be sad to miss</li><li><strong>Budget style</strong> — "mid-range, street food lunches, one nice dinner"</li></ul>
+<h2>Step 2: The prompt</h2>
+<p>Copy this and fill in the brackets:</p>
+<pre><code>Act as a local travel planner. Draft a [N]-day itinerary for [CITY] for
+[TRAVELERS], [DATES], arriving [TIME] on day 1.
+
+Constraints:
+- Pace is relaxed: max 2 major sights per day, plus wandering.
+- Group: [kids / mobility needs / early risers / etc.].
+- Top interests: [food markets, art, hiking, ...].
+- Budget: [style]. 
+- Assume we'll use public transit and walking only.
+
+For each activity, include:
+- Estimated time needed, and a realistic time to arrive.
+- Known closure rules or booking requirements IF you're confident;
+  write &quot;VERIFY&quot; instead of guessing.
+- A neighborhood note: is this same-day-compatible with the other stops?
+
+End with a list of every fact I should double-check myself, ranked by
+how badly it would hurt the trip if it were wrong.
+</code></pre>
+<p>The <code>VERIFY</code> rule is the heart of the prompt. You're telling the AI that "verified unknown" is a better answer than "confident guess."</p>
+<h2>Step 3: Read the draft like an editor</h2>
+<p>Skim for the four failure patterns:</p>
+<ol><li><strong>Geographic nonsense</strong> — morning market north of the river, then a same-day museum far south of it. Ask: "regroup this day geographically."</li><li><strong>Impossible time math</strong> — "morning: hike; lunch: cooking class; afternoon: three museums" is 14 hours of optimism. Ask it to recount the hours.</li><li><strong>Closed-when-you're-there</strong> — opening days, seasons, national holidays. These all get <code>VERIFY</code> or a web check.</li><li><strong>Everything-is-amazing</strong> — AI drafts rarely say "skip this." If every stop got a superlative, ask: "cut two stops and tell me why."</li></ol>
+<h2>Step 4: Verify the load-bearing details (15 minutes, no more)</h2>
+<p>Only these matter enough to check. Check each on the <strong>official</strong> site:</p>
+<ul><li><input type="checkbox" disabled> Opening hours and closed days for your top 3 sights</li><li><input type="checkbox" disabled> Whether any sight needs advance booking (many popular ones do)</li><li><input type="checkbox" disabled> First/last departure times of any transit you'll rely on</li><li><input type="checkbox" disabled> The one restaurant you'd be heartbroken to miss</li></ul>
+<p>Full checklist: see the <a href="verification-checklist.html">AI verification checklist</a>. Once those are true, small errors elsewhere won't hurt — leave salad or slack time in each day to absorb them.</p>
+<h2>Step 5: Stress-test the draft</h2>
+<p>Three follow-up prompts worth their weight:</p>
+<ul><li><em>"Assume it rains on day 2. Rainy-day version?"</em></li><li><em>"We slept badly and start at 11. Trim this day."</em></li><li><em>"What's the most fragile link in this plan?"</em> — AI is surprisingly good at naming its own weak spots when asked directly.</li></ul>
+<h2>Common worries</h2>
+<p><strong>"Isn't booking a real agent safer?"</strong> For complex trips — multi-city rail passes, group tours, accessibility needs — yes, a human agent is worth it. AI is for the self-planned trip where it does 80% of the typing.</p>
+<p><strong>"The AI apologized and changed its answer — now I trust it less."</strong> Changing its answer when you push back is normal and fine. Don't resolve disagreements by arguing; resolve them by <strong>verifying on the primary source</strong>. That's the whole system.</p>
+<p><strong>Reality check to keep in mind:</strong> an itinerary draft usually needs one round of human correction — usually the geographic regroup or the hours recount. Plan for that round and it stops being a surprise.</p>
+<h2>Copy-ready prompts</h2>
+<pre><code>Regroup day 2 geographically so we walk in one direction all day.
+</code></pre>
+<pre><code>Recount the hours in each day. Flag anything with more scheduled
+time than actually exists between [start] and [dinner].
+</code></pre>
+<pre><code>What are the three most fragile facts in this itinerary,
+ranked by damage if wrong?
+</code></pre>
+<hr>
+<p><em>Next: <a href="02-translation-restaurants-and-train-stations.html">Translation at tables and ticket windows</a></em></p>
+<hr>
+<p><em>Part of the <a href="index.html">AI Travel Tips</a> manual. Copyright (c) 2026 Asdale Dynamics, LLC — MIT-licensed.</em></p>
+<footer class="pagenav"><a href="index.html">← Start Here</a><a href="02-translation-restaurants-and-train-stations.html">2. Translation →</a></footer>
+<footer class="colophon">Part of the AI Travel Tips manual · Published by Asdale Dynamics, LLC · <a href="https://opensource.org/licenses/MIT">MIT licensed</a></footer>
+</main>
+</body>
+</html>

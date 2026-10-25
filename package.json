@@ -1,0 +1,11 @@
+{
+  "name": "travel-ai-helper-guide",
+  "version": "1.0.0",
+  "description": "AI Travel Tips (Calmer Trips) - a plain-English manual for using AI to plan calmer trips",
+  "type": "module",
+  "license": "MIT",
+  "scripts": {
+    "build": "node build.mjs",
+    "test": "node --test tests/"
+  }
+}
